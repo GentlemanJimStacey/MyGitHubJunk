@@ -232,7 +232,7 @@ cd ${mainHGDir}
 if ${subs}; then
     echo "There are sub repos found. Do you want to run the script? yes/no: "
     read answer 
-    if [[ answer == "no" ]]; then
+    if [[ ${answer} = "no" ]]; then
         echo "Exiting..."
         exit 0
     else
@@ -241,5 +241,5 @@ if ${subs}; then
     fi
 else
     echo "No submodules. Doing main repo..."
+    mainRepo
 fi
-mainRepo
